@@ -8,16 +8,21 @@
     </van-cell-group>
     <van-grid :border="false" :column-num="3">
       <van-grid-item text="撒的">
-        <van-image src="https://img.yzcdn.cn/vant/apple-1.jpg" />
-       
+        <van-image src="https://img.yzcdn.cn/vant/apple-1.jpg" />手机
       </van-grid-item>
       <van-grid-item>
-        <van-image src="https://img.yzcdn.cn/vant/apple-2.jpg" />
+        <van-image src="https://img.yzcdn.cn/vant/apple-2.jpg" />电脑
       </van-grid-item>
       <van-grid-item>
-        <van-image src="https://img.yzcdn.cn/vant/apple-3.jpg" />
+        <van-image src="https://img.yzcdn.cn/vant/apple-3.jpg" />平板
       </van-grid-item>
     </van-grid>
+    <van-card
+      :num="item.num"
+      :price="item.price"
+      :desc="item.desc"
+      :title="item.title"
+      thumb="https://img.yzcdn.cn/vant/t-thirt.jpg" v-for="item in products" :key="item.id"  @click="productDetails(item.id,item.title)"/>
   </div>
 </template>
 
@@ -26,8 +31,39 @@ import { hotList } from "./Index";
 export default {
   data() {
     return {
-      hotList
+      hotList,
+      products:[
+        {
+          id:'1',
+          num:'1',
+          title:'男装',
+          desc:'男装描述信息',
+          price:'2.00',
+          thumb:'https://img.yzcdn.cn/vant/t-thirt.jpg'
+        },
+         {
+          id:'2',
+          num:'2',
+          title:'女装',
+          desc:'女装描述信息',
+          price:'2.00',
+          thumb:'https://img.yzcdn.cn/vant/t-thirt.jpg'
+        },
+         {
+          id:'3',
+          num:'3',
+          title:'童装装',
+          desc:'童装装描述信息',
+          price:'2.00',
+          thumb:'https://img.yzcdn.cn/vant/t-thirt.jpg'
+        },
+      ]
     };
+  },
+  methods:{
+    productDetails(id, title) {
+      console.log(title);
+    }
   }
 };
 </script>
