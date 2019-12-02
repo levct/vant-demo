@@ -1,27 +1,11 @@
-这是一个低防多多app
-一个使用vue创建的vant演示项目
-# vant-vue
+### 这是一个使用vue-cli 3.0 构建的低防多多app
 
-## Project setup
+## 安装项目依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 启动项目
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
