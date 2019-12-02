@@ -6,6 +6,11 @@ import Vant from 'vant'
 
 import Hot from "../views/hot/Index.vue";
 import Man from "../views/man/Index.vue";
+import ProductDetails from "../views/productDetails/ProductDetails.vue";
+import Pay from "../views/pay/Pay.vue";
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload)
 
 Vue.use(VueRouter)
 Vue.use(Vant)
@@ -24,10 +29,21 @@ const routes = [{
             },
             {
                 path: '/man',
-                component: Man
+                component: Man,
+                lazyComponent: true
             },
-        ]
+            
+        ],
+        
     },
+    {
+        path:'/productDetails',
+        component:ProductDetails,
+    },
+    {
+        path:'/pay',
+        component:Pay
+    }
 
 ]
 

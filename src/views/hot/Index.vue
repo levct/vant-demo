@@ -22,7 +22,7 @@
       :price="item.price"
       :desc="item.desc"
       :title="item.title"
-      thumb="https://img.yzcdn.cn/vant/t-thirt.jpg" v-for="item in products" :key="item.id"  @click="productDetails(item.id,item.title)"/>
+      thumb="https://img.yzcdn.cn/vant/t-thirt.jpg" v-for="item in products" :key="item.id"  @click="productDetails(item.id)"/>
   </div>
 </template>
 
@@ -61,11 +61,11 @@ export default {
     };
   },
   methods:{
-    productDetails(id, title) {
-      console.log(title);
+    productDetails(id) {
+      this.$router.push({path:'productDetails', query:{productid:id}});
     }
   }
-};
+};  
 </script>
 
 <style scoped>
